@@ -21,9 +21,9 @@ export default function Hero() {
             <h1 className="max-w-xl text-6xl font-extrabold leading-tight tracking-tight text-[var(--color-text)]">
               Hilly 
               <br />
-              BLEEeeEEHHHHHHHHH
+               BLEEeeEEHHHH
               <br />
-              
+               ❤️❤️❤️❤️
             </h1>
 
             <p className="mt-8 max-w-lg text-lg leading-8 text-[var(--color-text-light)]">

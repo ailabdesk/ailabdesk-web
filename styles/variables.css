@@ -1,0 +1,91 @@
+/* =========================================================
+   AiLabDesk Design Tokens
+   ========================================================= */
+
+/* ---------- Colors ---------- */
+
+:root {
+
+  /* Brand */
+  --color-primary: #081C34;
+  --color-primary-light: #123056;
+
+  --color-accent: #FF7A00;
+  --color-accent-hover: #EA6D00;
+
+  /* Backgrounds */
+  --color-background: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F1F5F9;
+
+  /* Text */
+  --color-text: #0F172A;
+  --color-text-light: #64748B;
+
+  /* Borders */
+  --color-border: #E2E8F0;
+
+  /* Status */
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+
+  /* Hero Glow */
+  --hero-orange:
+    radial-gradient(circle at top left,
+      rgba(255,122,0,.14),
+      transparent 45%);
+
+  --hero-navy:
+    radial-gradient(circle at bottom right,
+      rgba(8,28,52,.08),
+      transparent 55%);
+}
+
+/* ---------- Radius ---------- */
+
+:root{
+
+  --radius-xs:8px;
+  --radius-sm:12px;
+  --radius-md:16px;
+  --radius-lg:20px;
+  --radius-xl:28px;
+  --radius-pill:9999px;
+
+}
+
+/* ---------- Shadows ---------- */
+
+:root{
+
+  --shadow-sm:
+    0 2px 8px rgba(15,23,42,.04);
+
+  --shadow-md:
+    0 10px 30px rgba(15,23,42,.06);
+
+  --shadow-lg:
+    0 18px 45px rgba(15,23,42,.08);
+
+}
+
+/* ---------- Layout ---------- */
+
+:root{
+
+  --container:1280px;
+
+  --section-space:120px;
+
+}
+
+/* ---------- Animation ---------- */
+
+:root{
+
+  --transition-fast:.2s ease;
+
+  --transition-normal:.35s ease;
+
+}

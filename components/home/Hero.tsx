@@ -19,11 +19,11 @@ export default function Hero() {
             </span>
 
             <h1 className="max-w-xl text-6xl font-extrabold leading-tight tracking-tight text-[var(--color-text)]">
-              Hilly 
+              Discover AI Tools
               <br />
-               BLEEeeEEHHHH
+               That Actually
               <br />
-               ❤️❤️❤️❤️
+               Works.
             </h1>
 
             <p className="mt-8 max-w-lg text-lg leading-8 text-[var(--color-text-light)]">

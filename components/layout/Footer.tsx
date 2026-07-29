@@ -4,7 +4,7 @@ import Container from "@/components/ui/Container";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-white">
+    <footer className="border-t border-slate-800 bg-[#334155] text-white">
 
       <Container>
 
@@ -15,15 +15,14 @@ export default function Footer() {
           <div>
 
             <Image
-              src="/ailabdesk-logo.png"
+              src="/ailabdesk-logo-trans.png"
               alt="AiLabDesk"
-              width={180}
+              width={210}
               height={50}
             />
 
-            <p className="mt-6 text-slate-600 leading-7">
-              Discover, compare and choose the best AI tools for work,
-              business and creativity.
+            <p className="mt-6 leading-7 text-slate-300">
+              Discover trusted AI tools and creator gear that help you work smarter, create faster, and build better.
             </p>
 
           </div>
@@ -32,19 +31,19 @@ export default function Footer() {
 
           <div>
 
-            <h3 className="font-semibold text-slate-900">
+            <h3 className="font-semibold text-white">
               Explore
             </h3>
 
-            <ul className="mt-6 space-y-3 text-slate-600">
+            <ul className="mt-6 space-y-3 text-slate-300 transition-all duration-200 hover:text-[#FF8A00] hover:translate-x-1">
 
-              <li><Link href="#">AI Tools</Link></li>
+              <li><Link href="#" className="transition-colors hover:text-[#FF8A00]">AI Tools</Link></li>
 
-              <li><Link href="#">Categories</Link></li>
+              <li><Link href="#" className="transition-colors hover:text-[#FF8A00]">Categories</Link></li>
 
-              <li><Link href="#">Compare</Link></li>
+              <li><Link href="#" className="transition-colors hover:text-[#FF8A00]">Compare</Link></li>
 
-              <li><Link href="#">Collections</Link></li>
+              <li><Link href="#" className="transition-colors hover:text-[#FF8A00]">Collections</Link></li>
 
             </ul>
 
@@ -96,7 +95,7 @@ export default function Footer() {
 
         </div>
 
-        <div className="flex flex-col items-center justify-between border-t border-slate-200 py-8 text-sm text-slate-500 lg:flex-row">
+        <div className="flex flex-col items-center justify-between border-t border-slate-700 py-8 text-sm text-slate-400 lg:flex-row">
 
           <p>
             © 2026 AiLabDesk. All rights reserved.

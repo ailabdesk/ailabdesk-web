@@ -23,8 +23,8 @@ export default function Navbar() {
           <Image
             src="/ailabdesk-logo-trans.png"
             alt="AiLabDesk"
-            width={210}
-            height={56}
+            width={250}
+            height={60}
             priority
           />
         </Link>
@@ -37,7 +37,8 @@ export default function Navbar() {
       href={item.href}
       style={{
         color: "#FFFFFF",
-        fontSize: "16px",
+        fontSize: "14px",
+        font:'sans-serif',
         fontWeight: 600,
       }}
       onMouseEnter={(e) => {

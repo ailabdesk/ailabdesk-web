@@ -4,12 +4,12 @@ import Container from "../ui/Container";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[var(--color-background)]">
+    <section className="hero-background relative overflow-hidden bg-[var(--color-background)]">
       {/* Background glow */}
       <div className="absolute inset-0 -z-10" style={{backgroundImage: "var(--hero-orange), var(--hero-navy)",}} />
 
       <Container>
-        <div className="grid min-h-[820px] items-center gap-20 py-24 lg:grid-cols-2">
+        <div className="grid min-h-[680px] items-center gap-12 py-16 lg:grid-cols-2">
 
           {/* Left */}
           <div className="relative z-10">
@@ -19,16 +19,15 @@ export default function Hero() {
             </span>
 
             <h1 className="max-w-xl text-6xl font-extrabold leading-tight tracking-tight text-[var(--color-text)]">
-              Discover AI Tools
+              Discover the Best
               <br />
-               That Actually
+               AI Tools &
               <br />
-               Works.
+               Creator Gear
             </h1>
 
             <p className="mt-8 max-w-lg text-lg leading-8 text-[var(--color-text-light)]">
-              Search, compare and discover the best AI software for work,
-              business and creativity.
+             Trusted AI software, hardware, and creator gear compared side by side.
             </p>
 
             <div className="mt-10">

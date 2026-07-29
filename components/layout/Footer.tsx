@@ -4,7 +4,7 @@ import Container from "@/components/ui/Container";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-800 bg-[#334155] text-white">
+    <footer className="border-t border-slate-700 bg-[#334155] text-white">
 
       <Container>
 
@@ -23,6 +23,7 @@ export default function Footer() {
 
             <p className="mt-6 leading-7 text-slate-300">
               Discover trusted AI tools and creator gear that help you work smarter, create faster, and build better.
+              
             </p>
 
           </div>
@@ -53,19 +54,19 @@ export default function Footer() {
 
           <div>
 
-            <h3 className="font-semibold text-slate-900">
+            <h3 className="font-semibold text-white">
               Resources
             </h3>
 
-            <ul className="mt-6 space-y-3 text-slate-600">
+            <ul className="mt-6 space-y-3 text-slate-300 transition-all duration-200 hover:text-[#FF8A00] hover:translate-x-1">
 
-              <li><Link href="#">Blog</Link></li>
+              <li><Link href="#" className="transition-colors hover:text-[#FF8A00]">Blog</Link></li>
 
-              <li><Link href="#">Reviews</Link></li>
+              <li><Link href="#" className="transition-colors hover:text-[#FF8A00]">Reviews</Link></li>
 
-              <li><Link href="#">Newsletter</Link></li>
+              <li><Link href="#" className="transition-colors hover:text-[#FF8A00]">Newsletter</Link></li>
 
-              <li><Link href="#">Submit Tool</Link></li>
+              <li><Link href="#" className="transition-colors hover:text-[#FF8A00]">Submit Tool</Link></li>
 
             </ul>
 
@@ -75,19 +76,21 @@ export default function Footer() {
 
           <div>
 
-            <h3 className="font-semibold text-slate-900">
+            <h3 className="font-semibold text-white">
               Company
             </h3>
 
-            <ul className="mt-6 space-y-3 text-slate-600">
+            <ul className="mt-6 space-y-3 text-slate-300 transition-all duration-200 hover:text-[#FF8A00] hover:translate-x-1">
 
-              <li><Link href="#">About</Link></li>
+              <li><Link href="#" className="transition-colors hover:text-[#FF8A00]">About</Link></li>
 
-              <li><Link href="#">Contact</Link></li>
+              <li><Link href="#" className="transition-colors hover:text-[#FF8A00]">Contact</Link></li>
 
-              <li><Link href="#">Privacy Policy</Link></li>
+              <li><Link href="#" className="transition-colors hover:text-[#FF8A00]">Privacy Policy</Link></li>
 
-              <li><Link href="#">Terms of Service</Link></li>
+              <li><Link href="#" className="transition-colors hover:text-[#FF8A00]">Terms of Service</Link></li>
+
+              <li><Link href="#" className="transition-colors hover:text-[#FF8A00]">Affiliate Disclosure</Link></li>
 
             </ul>
 
@@ -95,16 +98,17 @@ export default function Footer() {
 
         </div>
 
-        <div className="flex flex-col items-center justify-between border-t border-slate-700 py-8 text-sm text-slate-400 lg:flex-row">
+        <div className="mt-4 border-t border-slate-700 py-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm text-slate-400">
+              © {new Date().getFullYear()} AiLabDesk. All rights reserved.
+            </p>
 
-          <p>
-            © 2026 AiLabDesk. All rights reserved.
-          </p>
-
-          <p>
-            
-          </p>
-
+           <p className="mt-4 text-center text-xs text-slate-500">
+  <span className="font-medium text-slate-300">Disclosure:</span>{" "}
+  We may earn a commission from affiliate links, at no additional cost to you.
+</p>
+          </div>
         </div>
 
       </Container>

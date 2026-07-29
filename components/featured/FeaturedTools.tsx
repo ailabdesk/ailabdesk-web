@@ -1,32 +1,47 @@
-import { featuredTools } from "@/data/featuredTools";
-import Container from "@/components/ui/Container";
-import SectionHeader from "./SectionHeader";
+import SectionHeader from "@/components/ui/SectionHeader";
+import SectionBackground from "@/components/ui/SectionBackground";
 import ToolCard from "./ToolCard";
+import { tools } from "@/data/tools";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function FeaturedTools() {
+  const featuredTools = tools.filter((tool) => tool.featured);
+
   return (
-    <section className="py-24 bg-slate-50">
+    <SectionBackground variant="light">
+  <div className="mx-auto max-w-6xl px-6 py-14">
 
-      <Container>
+    {/* Section Header */}
+    <SectionHeader
+      badge="🔥 Featured"
+      title="Featured AI Tools"
+      description="Discover our curated selection of trusted AI tools for creators, developers, businesses, and professionals."
+    />
 
-        <SectionHeader
-          title="Featured AI Tools"
-          subtitle="Hand-picked AI tools trusted by creators, developers, marketers and businesses."
+    {/* Tool Grid */}
+    <div className="mx-auto mt-12 grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+      {featuredTools.map((tool) => (
+        <ToolCard key={tool.id} tool={tool} />
+      ))}
+    </div>
+
+    {/* 👇 ADD IT HERE */}
+    <div className="mt-14 flex justify-center">
+      <Link
+        href="/tools"
+        className="group inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 font-semibold text-slate-900 transition-all duration-300 hover:border-orange-300 hover:text-orange-600 hover:shadow-md"
+      >
+        View All AI Tools
+
+        <ArrowRight
+          size={18}
+          className="transition-transform duration-300 group-hover:translate-x-1"
         />
+      </Link>
+    </div>
 
-        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-
-          {featuredTools.slice(0, 6).map((tool) => (
-            <ToolCard
-              key={tool.id}
-              tool={tool}
-            />
-          ))}
-
-        </div>
-
-      </Container>
-
-    </section>
+  </div>
+</SectionBackground>
   );
 }

@@ -1,0 +1,153 @@
+import { Tool } from "@/types/tool";
+
+export const tools: Tool[] = [
+  {
+    id: "chatgpt",
+    name: "ChatGPT",
+    slug: "chatgpt",
+
+    description:
+      "The world's leading AI assistant for writing, coding, brainstorming, and productivity.",
+
+    category: "AI Assistant",
+
+    pricing: "Freemium",
+
+    rating: 4.9,
+
+    logo: "/logos/chatgpt.svg",
+
+    color: "#10A37F",
+
+    website: "https://chatgpt.com",
+
+    affiliateUrl: "",
+
+    featured: true,
+  },
+
+  {
+    id: "claude",
+    name: "Claude",
+    slug: "claude",
+
+    description:
+      "Powerful AI assistant known for reasoning and long-document analysis.",
+
+    category: "AI Assistant",
+
+    pricing: "Freemium",
+
+    rating: 4.8,
+
+    logo: "/logos/claude.svg",
+
+    color: "#D97757",
+
+    website: "https://claude.ai",
+
+    affiliateUrl: "",
+
+    featured: true,
+  },
+
+  {
+    id: "cursor",
+    name: "Cursor",
+    slug: "cursor",
+
+    description:
+      "AI-first code editor designed for professional software development.",
+
+    category: "AI Coding",
+
+    pricing: "Paid",
+
+    rating: 4.8,
+
+    logo: "/logos/cursor.svg",
+
+    color: "#000000",
+
+    website: "https://cursor.com",
+
+    affiliateUrl: "",
+
+    featured: true,
+  },
+
+  {
+    id: "perplexity",
+    name: "Perplexity",
+    slug: "perplexity",
+
+    description:
+      "AI-powered search engine that delivers fast, cited answers.",
+
+    category: "AI Search",
+
+    pricing: "Freemium",
+
+    rating: 4.8,
+
+    logo: "/logos/perplexity.svg",
+
+    color: "#0EA5A4",
+
+    website: "https://www.perplexity.ai",
+
+    affiliateUrl: "",
+
+    featured: true,
+  },
+
+  {
+    id: "midjourney",
+    name: "Midjourney",
+    slug: "midjourney",
+
+    description:
+      "Create high-quality AI-generated artwork and illustrations.",
+
+    category: "Image Generation",
+
+    pricing: "Paid",
+
+    rating: 4.9,
+
+    logo: "/logos/midjourney.svg",
+
+    color: "#111827",
+
+    website: "https://www.midjourney.com",
+
+    affiliateUrl: "",
+
+    featured: true,
+  },
+
+  {
+    id: "elevenlabs",
+    name: "ElevenLabs",
+    slug: "elevenlabs",
+
+    description:
+      "Industry-leading AI voice generation for creators and businesses.",
+
+    category: "Voice AI",
+
+    pricing: "Freemium",
+
+    rating: 4.9,
+
+    logo: "/logos/elevenlabs.svg",
+
+    color: "#111111",
+
+    website: "https://elevenlabs.io",
+
+    affiliateUrl: "",
+
+    featured: true,
+  },
+];

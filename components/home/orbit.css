@@ -1,0 +1,225 @@
+/* ------------------------------------------------ */
+/* HERO ECOSYSTEM */
+/* ------------------------------------------------ */
+
+.orbit-ring {
+  position: absolute;
+  inset: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+/* Orbit circle */
+.orbit-ring::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+
+  border: 1px solid rgba(148, 163, 184, 0.25);
+
+  background:
+    radial-gradient(circle, transparent 96%, rgba(255,255,255,.35));
+
+  box-shadow:
+    inset 0 0 20px rgba(255,255,255,.15),
+    0 0 30px rgba(34,211,238,.05);
+}
+
+/* Soft pulse */
+.orbit-ring::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: inherit;
+
+  border: 1px solid rgba(34,211,238,.08);
+
+  animation: orbitPulse 6s ease-in-out infinite;
+}
+
+/* ------------------------------------------------ */
+/* CENTER */
+/* ------------------------------------------------ */
+
+.ecosystem-core {
+  position: relative;
+  overflow: hidden;
+}
+
+.ecosystem-core::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+
+  background:
+    conic-gradient(
+      from 0deg,
+      rgba(34,211,238,.12),
+      rgba(59,130,246,.12),
+      rgba(168,85,247,.12),
+      rgba(34,211,238,.12)
+    );
+
+  animation: spinGradient 18s linear infinite;
+}
+
+.ecosystem-core::after {
+  content: "";
+
+  position: absolute;
+  inset: 10px;
+
+  border-radius: inherit;
+
+  border: 1px solid rgba(255,255,255,.25);
+}
+
+/* ------------------------------------------------ */
+/* ICONS */
+/* ------------------------------------------------ */
+
+.orbit-icon {
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+}
+
+.orbit-icon:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 0 18px rgba(34,211,238,.35),
+    0 12px 30px rgba(15,23,42,.15);
+}
+
+/* ------------------------------------------------ */
+/* PARTICLES */
+/* ------------------------------------------------ */
+
+.particle {
+  position: absolute;
+  border-radius: 999px;
+  background: rgba(34,211,238,.4);
+
+  animation: floatParticle 5s ease-in-out infinite;
+}
+
+/* ------------------------------------------------ */
+/* GLOW */
+/* ------------------------------------------------ */
+
+.ecosystem-glow {
+  position: absolute;
+  inset: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 999px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(34,211,238,.18),
+      transparent 70%
+    );
+
+  filter: blur(60px);
+}
+
+/* ------------------------------------------------ */
+/* ANIMATIONS */
+/* ------------------------------------------------ */
+
+@keyframes orbitPulse {
+
+  0% {
+    transform: scale(.98);
+    opacity: .2;
+  }
+
+  50% {
+    transform: scale(1.02);
+    opacity: .5;
+  }
+
+  100% {
+    transform: scale(.98);
+    opacity: .2;
+  }
+
+}
+
+@keyframes spinGradient {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+@keyframes floatParticle {
+
+  0% {
+    transform:
+      translateY(0)
+      scale(.9);
+
+    opacity: .3;
+  }
+
+  50% {
+    transform:
+      translateY(-14px)
+      scale(1.15);
+
+    opacity: 1;
+  }
+
+  100% {
+    transform:
+      translateY(0)
+      scale(.9);
+
+    opacity: .3;
+  }
+
+}
+
+/* ------------------------------------------------ */
+/* RESPONSIVE */
+/* ------------------------------------------------ */
+
+@media (max-width: 1280px) {
+
+  .orbit-ring {
+    transform: translate(-50%, -50%) scale(.92);
+  }
+
+}
+
+@media (max-width: 1024px) {
+
+  .orbit-ring {
+    transform: translate(-50%, -50%) scale(.82);
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .orbit-ring,
+  .orbit-ring::after,
+  .particle {
+    animation: none !important;
+  }
+
+}

@@ -1,27 +1,38 @@
 interface SectionHeaderProps {
   title: string;
-  subtitle: string;
+  description?: string;
+  badge?: string;
+  align?: "left" | "center";
 }
 
 export default function SectionHeader({
   title,
-  subtitle,
+  description,
+  badge,
+  align = "center",
 }: SectionHeaderProps) {
+  const alignment =
+    align === "center"
+      ? "text-center items-center"
+      : "text-left items-start";
+
   return (
-    <div className="mb-12 text-center">
+    <div className={`mb-12 flex flex-col ${alignment}`}>
+      {badge && (
+        <span className="inline-flex rounded-full border border-orange-200 bg-orange-50 px-4 py-1.5 text-sm font-semibold text-orange-600">
+          {badge}
+        </span>
+      )}
 
-      <span className="inline-flex rounded-full bg-orange-100 px-4 py-2 text-sm font-semibold text-orange-600">
-        Featured
-      </span>
-
-      <h2 className="mt-4 text-4xl font-bold text-slate-900">
+      <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
         {title}
       </h2>
 
-      <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
-        {subtitle}
-      </p>
-
+      {description && (
+        <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600">
+          {description}
+        </p>
+      )}
     </div>
   );
 }

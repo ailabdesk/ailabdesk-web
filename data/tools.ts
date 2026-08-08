@@ -7,7 +7,7 @@ export const tools: Tool[] = [
     slug: "chatgpt",
 
     description:
-      "The world's leading AI assistant for writing, coding, brainstorming, and productivity.",
+      "The go-to AI assistant for writing, coding, and getting things done faster.",
 
     category: "AI Assistant",
 
@@ -24,6 +24,8 @@ export const tools: Tool[] = [
     affiliateUrl: "",
 
     featured: true,
+    hero: true,
+    badge: "Editor's Pick",
   },
 
   {
@@ -32,7 +34,7 @@ export const tools: Tool[] = [
     slug: "claude",
 
     description:
-      "Powerful AI assistant known for reasoning and long-document analysis.",
+      "Best for deep thinking — long documents, complex reasoning, careful writing.",
 
     category: "AI Assistant",
 
@@ -49,6 +51,10 @@ export const tools: Tool[] = [
     affiliateUrl: "",
 
     featured: true,
+
+    hero: true,
+
+    badge: "Popular",
   },
 
   {
@@ -57,7 +63,7 @@ export const tools: Tool[] = [
     slug: "cursor",
 
     description:
-      "AI-first code editor designed for professional software development.",
+      "Code editor built for developers who want AI pair-programming, not autocomplete.",
 
     category: "AI Coding",
 
@@ -74,6 +80,10 @@ export const tools: Tool[] = [
     affiliateUrl: "",
 
     featured: true,
+
+    hero: true,
+
+    badge: "Popular",
   },
 
   {
@@ -99,6 +109,10 @@ export const tools: Tool[] = [
     affiliateUrl: "",
 
     featured: true,
+
+    hero: true,
+
+    badge: "New",
   },
 
   {
@@ -124,6 +138,9 @@ export const tools: Tool[] = [
     affiliateUrl: "",
 
     featured: true,
+
+    hero: true,
+    badge: "Popular",
   },
 
   {
@@ -149,5 +166,8 @@ export const tools: Tool[] = [
     affiliateUrl: "",
 
     featured: true,
+
+    hero: true,
+    badge: "Popular",
   },
 ];

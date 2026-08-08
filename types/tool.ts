@@ -20,4 +20,9 @@ export interface Tool {
   affiliateUrl?: string;
 
   featured?: boolean;
+
+  // Hero Dashboard
+  hero?: boolean;
+
+  badge?: "Editor's Pick" | "Popular" | "New";
 }

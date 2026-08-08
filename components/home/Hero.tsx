@@ -1,77 +1,326 @@
-import HeroDashboard from "./HeroDashboard";
-import SearchBar from "../ui/SearchBar";
+"use client";
+
+import { motion } from "framer-motion";
+
 import Container from "../ui/Container";
+import SearchBar from "../ui/SearchBar";
+
+import HeroBackground from "./HeroBackground";
+import HeroEcosystem from "./HeroEcosystem";
+
+const easing: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
+const titleTransition = {
+  duration: 0.9,
+  ease: easing,
+};
+
+const fadeTransition = {
+  duration: 0.8,
+  ease: easing,
+};
 
 export default function Hero() {
   return (
-    <section className="hero-background relative overflow-hidden bg-[var(--color-background)]">
-      {/* Background glow */}
-      <div className="absolute inset-0 -z-10" style={{backgroundImage: "var(--hero-orange), var(--hero-navy)",}} />
+    <section className="relative flex min-h-[calc(100vh-84px)] items-center overflow-hidden">
+      <HeroBackground />
 
       <Container>
-        <div className="grid min-h-[680px] items-center gap-12 py-16 lg:grid-cols-2">
+        <div className="grid w-full items-center gap-18 lg:grid-cols-2">
+          {/* ================= LEFT ================= */}
 
-          {/* Left */}
           <div className="relative z-10">
 
-            <span className="mb-6 inline-flex rounded-full border border-orange-200 bg-orange-50 px-4 py-2 text-sm font-medium text-[var(--color-accent)]">
-              Discover • Compare • Choose
-            </span>
+            {/* Badge */}
 
-            <h1 className="max-w-xl text-6xl font-extrabold leading-tight tracking-tight text-[var(--color-text)]">
-              Discover the Best
-              <br />
-               AI Tools &
-              <br />
-               Creator Gear
-            </h1>
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 20,
+                scale: 0.95,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                scale: 1,
+              }}
+              transition={{
+                duration: 0.6,
+                ease: easing,
+              }}
+              className="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-white/70 px-5 py-2 text-sm font-medium text-orange-600 shadow-lg backdrop-blur-xl"
+            >
+              AI Discovery Platform
+            </motion.div>
 
-            <p className="mt-8 max-w-lg text-lg leading-8 text-[var(--color-text-light)]">
-             Trusted AI software, hardware, and creator gear compared side by side.
-            </p>
+            {/* ================= TITLE ================= */}
 
-            <div className="mt-10">
-              <SearchBar />
-            </div>
+            <div className="mt-8 space-y-2">
 
-            <div className="mt-8 flex flex-wrap gap-3">
+              <div className="overflow-hidden">
 
-              {[
-                "ChatGPT",
-                "Claude",
-                "Cursor",
-                "Gemini",
-                "Canva",
-              ].map((item) => (
-                <button
-                  key={item}
-                  className="
-                    rounded-full
-                    border
-                    border-slate-200
-                    bg-white
-                    px-4
-                    py-2
-                    text-sm
-                    font-medium
-                    transition-all
-                    duration-200
-                    hover:-translate-y-0.5
-                    hover:border-[var(--color-accent)]
-                    hover:text-[var(--color-accent)]
-"
+                <motion.h1
+                  initial={{
+                    opacity: 0,
+                    y: 90,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  transition={{
+                    ...titleTransition,
+                    delay: 0.15,
+                  }}
+                  className="text-6xl font-extrabold leading-none tracking-tight text-slate-900 lg:text-7xl xl:text-8xl"
                 >
-                  {item}
-                </button>
-              ))}
+                  Discover the
+                </motion.h1>
+
+              </div>
+
+              <div className="overflow-hidden">
+
+                <motion.h1
+                  initial={{
+                    opacity: 0,
+                    y: 90,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  transition={{
+                    ...titleTransition,
+                    delay: 0.30,
+                  }}
+                  className="text-6xl font-extrabold leading-none tracking-tight text-slate-900 lg:text-7xl xl:text-8xl"
+                >
+                  World's Best
+                </motion.h1>
+
+              </div>
+
+              <div className="overflow-hidden">
+
+                <motion.h1
+                  initial={{
+                    opacity: 0,
+                    y: 90,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  transition={{
+                    ...titleTransition,
+                    delay: 0.45,
+                  }}
+                  className="text-6xl font-extrabold leading-none tracking-tight lg:text-7xl xl:text-8xl"
+                >
+                  <motion.span
+                    animate={{
+                      backgroundPosition: [
+                        "0%",
+                        "100%",
+                        "0%",
+                      ],
+                    }}
+                    transition={{
+                      duration: 8,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                    className="bg-gradient-to-r from-[#FF6B00] via-[#FF9800] to-[#FFC54D] bg-[length:200%_100%] bg-clip-text text-transparent"
+                  >
+                    AI Tools
+                  </motion.span>
+                </motion.h1>
+
+              </div>
+
+            </div>
+                        {/* ================= DESCRIPTION ================= */}
+
+            <motion.p
+              initial={{
+                opacity: 0,
+                y: 30,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                ...fadeTransition,
+                delay: 0.75,
+              }}
+              className="mt-8 max-w-xl text-lg leading-8 text-slate-600"
+            >
+              Explore, compare and discover the fastest-growing AI tools,
+              creator software, AI models and productivity apps, all in one
+              beautifully organized platform.
+            </motion.p>
+
+            {/* ================= SEARCH ================= */}
+
+            <motion.div
+              initial={{
+                opacity: 0,
+                scaleX: 0.88,
+                y: 24,
+              }}
+              animate={{
+                opacity: 1,
+                scaleX: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 0.8,
+                delay: 0.95,
+                ease: easing,
+              }}
+              style={{
+                transformOrigin: "left center",
+              }}
+              className="mt-10 max-w-xl"
+            >
+              <SearchBar />
+            </motion.div>
+
+            {/* ================= STATS ================= */}
+
+            <div className="mt-12 flex flex-wrap gap-5">
+
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  y: 25,
+                  scale: 0.92,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                }}
+                transition={{
+                  ...fadeTransition,
+                  delay: 1.15,
+                }}
+                whileHover={{
+                  y: -6,
+                  scale: 1.03,
+                }}
+                className="rounded-2xl border border-white/50 bg-white/60 px-7 py-5 shadow-xl backdrop-blur-xl"
+              >
+                <div className="text-3xl font-bold text-slate-900">
+                  150+
+                </div>
+
+                <div className="mt-1 text-sm text-slate-500">
+                  AI Tools
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  y: 25,
+                  scale: 0.92,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                }}
+                transition={{
+                  ...fadeTransition,
+                  delay: 1.28,
+                }}
+                whileHover={{
+                  y: -6,
+                  scale: 1.03,
+                }}
+                className="rounded-2xl border border-white/50 bg-white/60 px-7 py-5 shadow-xl backdrop-blur-xl"
+              >
+                <div className="text-3xl font-bold text-slate-900">
+                  40+
+                </div>
+
+                <div className="mt-1 text-sm text-slate-500">
+                  Categories
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  y: 25,
+                  scale: 0.92,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                }}
+                transition={{
+                  ...fadeTransition,
+                  delay: 1.41,
+                }}
+                whileHover={{
+                  y: -6,
+                  scale: 1.03,
+                }}
+                className="rounded-2xl border border-white/50 bg-white/60 px-7 py-5 shadow-xl backdrop-blur-xl"
+              >
+                <div className="text-3xl font-bold text-slate-900">
+                  Daily
+                </div>
+
+                <div className="mt-1 text-sm text-slate-500">
+                  Updated
+                </div>
+              </motion.div>
 
             </div>
 
           </div>
 
-          {/* Right */}
+          {/* ================= RIGHT ================= */}
 
-          <HeroDashboard />
+                    <motion.div
+            initial={{
+              opacity: 0,
+              scale: 0.88,
+              x: 40,
+            }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 1.2,
+              delay: 1.6,
+              ease: easing,
+            }}
+            className="relative flex items-center justify-center"
+          >
+            {/* Floating Motion */}
+
+            <motion.div
+              animate={{
+                y: [0, -10, 0],
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <HeroEcosystem />
+            </motion.div>
+          </motion.div>
 
         </div>
       </Container>

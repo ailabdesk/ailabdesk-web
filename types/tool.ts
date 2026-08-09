@@ -17,7 +17,12 @@ export interface Tool {
 
   website: string;
 
+  
   affiliateUrl?: string;
+  affiliateStatus?: "none" | "pending" | "approved" | "inactive";
+  affiliateNetwork?: string;
+  affiliateProgram?: string;
+
 
   featured?: boolean;
 

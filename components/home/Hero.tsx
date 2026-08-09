@@ -55,7 +55,7 @@ export default function Hero() {
 
             {/* ================= TITLE ================= */}
 
-            <div className="mt-8 space-y-2">
+            <div className="mt-9 space-y-4">
 
               <div className="overflow-hidden">
 
@@ -74,7 +74,7 @@ export default function Hero() {
                   }}
                   className="text-6xl font-extrabold leading-none tracking-tight text-slate-900 lg:text-7xl xl:text-8xl"
                 >
-                  Discover the
+                  Discover 
                 </motion.h1>
 
               </div>
@@ -94,29 +94,7 @@ export default function Hero() {
                     ...titleTransition,
                     delay: 0.30,
                   }}
-                  className="text-6xl font-extrabold leading-none tracking-tight text-slate-900 lg:text-7xl xl:text-8xl"
-                >
-                  World's Best
-                </motion.h1>
-
-              </div>
-
-              <div className="overflow-hidden">
-
-                <motion.h1
-                  initial={{
-                    opacity: 0,
-                    y: 90,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  transition={{
-                    ...titleTransition,
-                    delay: 0.45,
-                  }}
-                  className="text-6xl font-extrabold leading-none tracking-tight lg:text-7xl xl:text-8xl"
+                  className="text-6xl font-extrabold leading-[1.08] tracking-tight lg:text-7xl xl:text-8xl"
                 >
                   <motion.span
                     animate={{
@@ -139,6 +117,30 @@ export default function Hero() {
 
               </div>
 
+              <div className="overflow-hidden pb-3">
+
+                <motion.h1
+                  initial={{
+                    opacity: 0,
+                    y: 90,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  transition={{
+                    ...titleTransition,
+                    delay: 0.45,
+                  }}
+                  className="text-6xl font-extrabold leading-[1.08] tracking-tight text-slate-900 lg:text-7xl xl:text-8xl"
+                >
+                  <span className="text-slate-900">
+                    worth using
+                  </span>
+                </motion.h1>
+
+              </div>
+
             </div>
                         {/* ================= DESCRIPTION ================= */}
 
@@ -157,9 +159,8 @@ export default function Hero() {
               }}
               className="mt-8 max-w-xl text-lg leading-8 text-slate-600"
             >
-              Explore, compare and discover the fastest-growing AI tools,
-              creator software, AI models and productivity apps, all in one
-              beautifully organized platform.
+              Explore, compare and discover AI tools, software and equipment for
+              writing, video, image, voice, coding, business and content creation.
             </motion.p>
 
             {/* ================= SEARCH ================= */}
@@ -218,7 +219,7 @@ export default function Hero() {
                 </div>
 
                 <div className="mt-1 text-sm text-slate-500">
-                  AI Tools
+                  AI Products
                 </div>
               </motion.div>
 
@@ -274,11 +275,11 @@ export default function Hero() {
                 className="rounded-2xl border border-white/50 bg-white/60 px-7 py-5 shadow-xl backdrop-blur-xl"
               >
                 <div className="text-3xl font-bold text-slate-900">
-                  Daily
+                  Trusted
                 </div>
 
                 <div className="mt-1 text-sm text-slate-500">
-                  Updated
+                  Recommendations
                 </div>
               </motion.div>
 

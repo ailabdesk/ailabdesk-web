@@ -7,7 +7,7 @@ export const tools: Tool[] = [
     slug: "chatgpt",
 
     description:
-      "The go-to AI assistant for writing, coding, and getting things done faster.",
+       "ChatGPT is an AI assistant for writing, research, brainstorming, coding, analysis, image creation, and everyday work.",
 
     category: "AI Assistant",
 
@@ -19,9 +19,12 @@ export const tools: Tool[] = [
 
     color: "#10A37F",
 
-    website: "https://chatgpt.com",
+    website: "",
 
     affiliateUrl: "",
+    affiliateStatus: "none",
+    affiliateNetwork: "",
+    affiliateProgram: "",
 
     featured: true,
     hero: true,
@@ -46,9 +49,12 @@ export const tools: Tool[] = [
 
     color: "#D97757",
 
-    website: "https://claude.ai",
+    website: "",
 
     affiliateUrl: "",
+    affiliateStatus: "none",
+    affiliateNetwork: "",
+    affiliateProgram: "",
 
     featured: true,
 
@@ -75,9 +81,12 @@ export const tools: Tool[] = [
 
     color: "#000000",
 
-    website: "https://cursor.com",
+    website: "",
 
     affiliateUrl: "",
+    affiliateStatus: "none",
+    affiliateNetwork: "",
+    affiliateProgram: "",
 
     featured: true,
 
@@ -104,11 +113,13 @@ export const tools: Tool[] = [
 
     color: "#0EA5A4",
 
-    website: "https://www.perplexity.ai",
+    website: "",
 
     affiliateUrl: "",
 
-    featured: true,
+    affiliateStatus: "none",
+    affiliateNetwork: "",
+    affiliateProgram: "",
 
     hero: true,
 
@@ -133,9 +144,12 @@ export const tools: Tool[] = [
 
     color: "#111827",
 
-    website: "https://www.midjourney.com",
+    website: "",
 
     affiliateUrl: "",
+    affiliateStatus: "none",
+    affiliateNetwork: "",
+    affiliateProgram: "",
 
     featured: true,
 
@@ -161,9 +175,12 @@ export const tools: Tool[] = [
 
     color: "#111111",
 
-    website: "https://elevenlabs.io",
+    website: "",
 
     affiliateUrl: "",
+    affiliateStatus: "none",
+    affiliateNetwork: "",
+    affiliateProgram: "",
 
     featured: true,
 
